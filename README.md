@@ -158,16 +158,40 @@ Data exchange between **frontend (Axios)** and **backend (Flask)** is handled in
 ### 🔸 Backend (Flask)
 ```bash
 cd server
+
+# Install dependencies
 pipenv install
+
+# (Alternative if Pipenv not installed)
+pip install -r requirements.txt
+
+# Copy environment example and configure your credentials
+# also Open .env and replace placeholder values with your own credentials (e.g., MySQL username/password, Gemini API key, email credentials).
+These variables are required for the backend to connect to your database and email service.
+
+# macOS/Linux:
+cp .env.example .env
+# Windows (PowerShell):
+copy .env.example .env
+
+
+# Activate virtual environment
 pipenv shell
+
+# Run the Flask server
 python app.py
+
 ```
 
 ### 🔹 Frontend (React)
 ```bash
 cd client
+# Install all Node dependencies (node_modules will auto-generate)
 npm install
+
+# Start development server
 npm run dev
+
 ```
 
 Access via → [http://localhost:5173](http://localhost:5173)
@@ -210,7 +234,9 @@ JWT_SECRET=your_secret_key
 
 **Developed by [Khalilullah Nohri](https://www.linkedin.com/in/khalilullah-dev)**  
 💻 Python & JavaScript Developer  
+📩 For queries or collaboration: **nohrikhalilullah@gmail.com**  
 🌐 [GitHub](https://github.com/Khalilullah-Nohri) • [LinkedIn](https://www.linkedin.com/in/khalilullah-dev)
+
 
 ---
 
